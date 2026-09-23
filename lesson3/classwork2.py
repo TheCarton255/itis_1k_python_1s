@@ -49,15 +49,3 @@ for i, (name, avg) in enumerate(rating(journal), start=1):
 print(f"Лучший: {best_student(journal)}")
 print(f"Все оценки: {sorted(unique_scores(journal))}")
 print(f"В зоне риска:{risk_students(journal)}")
-
-print("\n--- Проверка add_score ---")
-add_score(journal, "", 8)
-add_score(journal, "", 11)
-print(f"Журнал после изменений:{journal}")
-
-print(f"\n--- Типы промежуточных результатов ---")
-print(f"rating: {type(rating(journal))}")
-print(f"best_student: {type(best_student(journal))}")
-print(f"unique_scores: {type(unique_scores(journal))}")
-print(f"add_score: {type(add_score(journal, 'Тест', 5))}")
-print(f"risk_students: {type(risk_students(journal))}")

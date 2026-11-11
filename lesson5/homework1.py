@@ -15,14 +15,14 @@ def count_grades(scores: list[int]) -> dict[str, int]:
     counts = {}
     for s in scores:
         grade = to_grade(s)
-        counts[grade] = counts.get(grade, 0) + 1 #сначало из-за того что counts[grade] ещё нет а потом только записать поэтому появляется KeyError
+        counts[grade] = counts.get(grade, 0) + 1 #сначало из-за того что counts[grade] ещё нет, а потом только записать поэтому появляется KeyError
     return counts
 
 
 def main() -> None:
     """Считывает баллы и печатает статистику."""
     raw = input("Баллы через пробел: ")
-    scores = [int(x) for x in raw.split()] #сравнивает str и int  чего не может быть
+    scores = [int(x) for x in raw.split()] #сравнивает str и int чего не может быть
     print(count_grades(scores))
     print("Средний балл:", sum(scores) / len(scores))
 

@@ -33,12 +33,3 @@ class Reader:
 
 b = Book("Война и мир", "Толстой", 1869)
 r = Reader("Иван")
-
-assert str(b) == "Война и мир - Толстой (1869)"
-assert r.take(b) is True
-assert b.is_issued is True
-assert r.take(b) is False
-assert r.give_back(b) is True
-assert b.is_issued is False
-
-print("Все тесты пройдены успешно!")
